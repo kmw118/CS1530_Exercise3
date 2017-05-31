@@ -29,5 +29,5 @@ task sequencehelp << {
 	println "If the user enters anything other than a 32-bit integer or enters a negative integer for positiveInteger, the program will exit with error code 2"
 	println "Added feature: if the user enters either too many arguments or not enough arguments, the program will exit with error code 3"
 	println "\nThe result of running the program is:\n\tFor triangle, \"Tri(n) = x\", where n is the number given by the user and x is the triangular number sequence of n"
-    println "\tFor lazy, \"Lazy(n) = x\", where n is the number given by the user and x is the lazy caterer sequence of n"
+    	println "\tFor lazy, \"Lazy(n) = x\", where n is the number given by the user and x is the lazy caterer sequence of n"
 }
