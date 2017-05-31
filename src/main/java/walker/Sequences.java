@@ -24,7 +24,7 @@ public class Sequences
 				if(num < 0)
 				{
 					System.out.println("\nPositive integers only\n");
-					System.exit(1);
+					System.exit(2);
 				}
 				if(args[0].equalsIgnoreCase("lazy"))
 				{
