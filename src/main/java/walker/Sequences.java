@@ -2,8 +2,8 @@ package walker;
 
 public class Sequences
 {
-    public static void main(String[] args)
-	{
+	public static void main(String[] args)
+    	{
 		if(args.length != 2)
 		{
 			if(args.length < 2)
@@ -44,7 +44,7 @@ public class Sequences
 				System.exit(2);
 			}
 		}
-    }
+    	}
 	
 	public static int tri(int num) 
 	{
