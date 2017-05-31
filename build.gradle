@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "walker.Sequences"
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
+
+run {
+    try {
+        systemProperties System.getProperties()
+		args System.getProperty("args").split(',')
+    } catch (Exception e) {
+        //do nothing
+    }
+}
+
+task sequencehelp << {
+	println "\n\nInteger Sequence Project\n"
+	
+	println "To execute this project, simply type the following (with no spaces between the comma): gradle -q run -Dargs=\"sequenceType,positiveInteger\""
+	println "where sequenceType is either the word lazy or triangle and positiveInteger is a positive 32-bit integer"
+	println "\nIf the user enters anything other than lazy or triangle for sequenceType, the program will exit with error code 1"
+	println "If the user enters anything other than a 32-bit integer or enters a negative integer for positiveInteger, the program will exit with error code 2"
+	println "Added feature: if the user enters either too many arguments or not enough arguments, the program will exit with error code 3"
+	println "\nThe result of running the program is:\n\tFor triangle, \"Tri(n) = x\", where n is the number given by the user and x is the triangular number sequence of n"
+    println "\tFor lazy, \"Lazy(n) = x\", where n is the number given by the user and x is the lazy caterer sequence of n"
+}
